@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "275931613563",
+    "firebase_url": "https://cimubb-4f94d.firebaseio.com",
+    "project_id": "cimubb-4f94d",
+    "storage_bucket": "cimubb-4f94d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275931613563:android:433d78d3d1266767",
+        "android_client_info": {
+          "package_name": "com.gerard.curso.citec"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "275931613563-n6cben3vpn0d80kerfl6ce4u2vfoinco.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gerard.curso.citec",
+            "certificate_hash": "fa9fb33fd2cbe844235a5ef83d23e00e53a768dd"
+          }
+        },
+        {
+          "client_id": "275931613563-8rclgbo1iet81ru8uu1op61j24nt61vg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGaEskENyft9_p12VRIVH5ffm2yMf-C9c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "275931613563-8rclgbo1iet81ru8uu1op61j24nt61vg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

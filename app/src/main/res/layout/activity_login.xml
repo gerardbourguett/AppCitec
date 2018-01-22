@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gerard.curso.citec.LoginActivity"
+    android:layout_margin="20dp">
+
+    <ImageView
+        android:id="@+id/textView"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/textview1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText_email"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="13dp"
+        android:gravity="center"
+        android:text="INGRESO PLATAFORMA CITEC"
+        android:textSize="21dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editText_email"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText_password"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:hint="Email" />
+
+    <EditText
+        android:id="@+id/editText_password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_login"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:hint="Contraseña" />
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="84dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="Ingresar" />
+
+
+
+</RelativeLayout>
