@@ -6,5 +6,5 @@ package com.gerard.curso.citec.objetos;
 
 public class FirebaseReferences {
     //Esta clase junta las bases de datos de Firebase
-    final public static String DATORANDOM_REFERENCE = "DatoRandom";
+    final public static String DATORANDOM_REFERENCE = "Constructora";
 }

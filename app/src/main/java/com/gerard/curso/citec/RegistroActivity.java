@@ -1,57 +1,61 @@
 package com.gerard.curso.citec;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
-import com.gerard.curso.citec.objetos.DatoRandom;
-import com.gerard.curso.citec.objetos.FirebaseReferences;
+import com.gerard.curso.citec.objetos.Adapter;
+import com.gerard.curso.citec.objetos.Constructora;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 public class RegistroActivity extends AppCompatActivity {
 
-    Button boton1,boton2;
-    TextView dato1,dato2,numero1,numero2;
+    private RecyclerView rv;
+
+    List<Constructora> constructoras;
+
+    Adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
 
-        boton1 = findViewById(R.id.registro);
-        boton2 = findViewById(R.id.volver);
-        dato1 = findViewById(R.id.dato1);
-        dato2 = findViewById(R.id.dato2);
-        numero1 = findViewById(R.id.numero1);
-        numero2 = findViewById(R.id.numero2);
+        rv = findViewById(R.id.recyclerView);
+
+        rv.setLayoutManager(new LinearLayoutManager(this));
+
+        constructoras = new ArrayList<>();
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference myRef = database.getReference(FirebaseReferences.DATORANDOM_REFERENCE);
 
-        boton1.setOnClickListener(new View.OnClickListener() {
+        adapter = new Adapter(constructoras);
+
+        rv.setAdapter(adapter);
+
+
+        database.getReference().getRoot().addValueEventListener(new ValueEventListener() {
             @Override
-            public void onClick(View view) {
-                DatoRandom registro = new DatoRandom(dato1, dato2, numero1,numero2);
-                myRef.child(FirebaseReferences.DATORANDOM_REFERENCE).push().setValue(registro);
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                constructoras.removeAll(constructoras);
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()){
+                    Constructora constructora = snapshot.getValue(Constructora.class);
+                    constructoras.add(constructora);
+                }
+                adapter.notifyDataSetChanged();
             }
-        });
 
-        boton2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(RegistroActivity.this, UserProfileActivity.class);
+            public void onCancelled(DatabaseError databaseError) {
+
             }
         });
     }
-
 }

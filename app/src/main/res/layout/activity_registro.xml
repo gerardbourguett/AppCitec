@@ -1,84 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.gerard.curso.citec.RegistroActivity">
+    tools:context="com.gerard.curso.citec.RegistroActivity"
+    tools:layout_editor_absoluteY="81dp">
 
-    <TextView
-        android:id="@+id/entrada"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="25dp"
-        android:gravity="center"
-        android:text="Registro DatoRandom"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent" >
 
-    <EditText
-        android:id="@+id/dato1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/entrada"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:inputType="text"
-        android:text="Dato 1" />
-
-    <EditText
-        android:id="@+id/dato2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_below="@id/dato1"
-        android:inputType="text"
-        android:text="Dato 2"
-        />
-
-    <EditText
-        android:id="@+id/numero1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/dato2"
-        android:gravity="center"
-        android:inputType="number"
-        android:text="Numero 1" />
-
-    <EditText
-        android:id="@+id/numero2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/numero1"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:inputType="date"
-        android:text="Fecha"/>
-
-    <Button
-        android:id="@+id/registro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="150dp"
-        android:text="Registrar DatoRandom"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/volver"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="100dp"
-        android:text="Volver"
-        android:textStyle="bold" />
+    </android.support.v7.widget.RecyclerView>
 
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

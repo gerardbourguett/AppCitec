@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Citec.iml" filepath="$PROJECT_DIR$/Citec.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AppCitec.iml" filepath="$PROJECT_DIR$/AppCitec.iml" />
+      <module fileurl="file://C:\Users\laboratorio\StudioProjects\AppCitec\Citec.iml" filepath="C:\Users\laboratorio\StudioProjects\AppCitec\Citec.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
